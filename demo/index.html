@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+ 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.css"/>  
+ 	<link rel='stylesheet' href="style.css"></link>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/nvd3/1.8.1/nv.d3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-nvd3/1.0.9/angular-nvd3.js"></script>
+<body>
+
+<div ng-app="bank-demo" ng-controller="mainCtrl as vm">
+	<div class="container main-container">
+		<div class="">
+
+			<div class="mt-2 mb-2">
+				<h2 >Connaizen Next Best Action</h2>
+			</div>
+			<div class='divider'>
+			</div>
+			<div class="mt-2 mb-2">
+				<h3 >Overview			</h3>
+				<nvd3 options="options" data="data" class="with-3d-shadow with-transitions"></nvd3>
+			</div>
+			<div class='divider'></div>
+			<div class="row">
+				<p class="mt-2">Select Customer ID</p>	
+
+				<button type="button" class='demo-btn btn'>ID1</button>
+				<button class='demo-btn  btn '>ID2</button>
+				<button class='demo-btn btn '>ID3</button>
+				<button class='demo-btn btn '>ID4</button>
+				<button class='demo-btn btn '>ID5</button>
+
+			</div>	
+			<div class="divider"></div>
+			<div class="mt-2 mb-2">
+				<h3>Single View of Customer</h3>
+				<div class="row mt-2 " >
+					<div class=" box-left">
+						<h5>Nikhil Garg</h5>
+						<p>Customer ID:</p>
+						<p>Account Standing:</p>
+						<p>Customer Lifetime Value:</p>
+						<p>Churn Risk:</p>
+					</div>
+					<div class=" table-responsive box-right" style="margin-left: 2%">
+						<h5>Current Bank Products</h5>
+						<table class="table table-condensed table-borderless">
+ 						   <thead>
+						      <tr>
+						        <th>Type</th>
+						        <th>Account Number</th>
+						        
+						      </tr>
+						    </thead>
+						    <tbody>
+							     
+						    </tbody>
+						</table>
+
+
+					</div>
+
+				</div>
+				<div class="row mt-2 mb-2">
+					<div class="table-responsive box-left">
+						<h5>Transactions</h5>
+						<table class="table table-condensed table-borderless">
+ 						   <thead>
+						      <tr>
+						        <th>Date</th>
+						        <th>Amount</th>
+						        
+						      </tr>
+						    </thead>
+						    <tbody>
+						    	 <tr>
+        							<td>July</td>
+							        <td>INR 34,325.00</td>
+							        
+							      </tr>
+							     
+						    </tbody>
+						</table>	
+					</div>
+					<div class="  box-right" style="margin-left: 2%">
+						<h5>Activities</h5>
+						<table class="table table-condensed table-borderless">
+ 						   <thead>
+						      <tr>
+						        <th>Date</th>
+						        <th>Activity</th>
+						        
+						      </tr>
+						    </thead>
+						    <tbody>
+
+							     
+						    </tbody>
+						</table>
+					</div>
+
+				</div>
+			</div>
+				
+				
+			<div class="divider" ></div>
+			<div>
+				<h3>Next Best Action</h3>
+				<div class="row mt-2 mb-2">
+					<div class="table-responsive box-right">
+						<h5>Eligible Products</h5>
+						<table class="table table-condensed table-borderless">
+ 						   <thead>
+						      <tr>
+						        <th>Type</th>
+						        <th>Utilized</th>
+						        <th>Tendency</th>
+						        <th>Benefit</th>
+						        <th>Channel</th>
+						        <th>Weightage</th>
+						      </tr>
+						    </thead>
+						    <tbody>
+
+							     
+						    </tbody>
+						</table>
+					</div>
+					<div class="  box-left" style="margin-left: 2%">
+						<h5>Customer Journey Stage:</h5>
+						<p>Last Seen Date:</p>
+						<p>Channel:</p>
+						<p>Action:</p>
+						<p>Action Status</p>
+
+					</div>
+
+
+				</div>
+			</div>
+			<div class="divider"></div>
+			<div class="mb-2 mt-2">
+				<h3>Derived Values</h3>
+				<table class="table">
+    				<thead>
+				      <tr>
+				        <th>#</th>
+				        <th>MCC-Category</th>
+				        <th>Recency	</th>
+				        <th>Frequency</th>
+				        <th>Monetary</th>
+				        <th>Weightage</th>
+				      </tr>
+				    </thead>
+				    <tbody>
+				      <tr>
+				        <td>1</td>
+				        <td>20% off on</td>
+				        <td>Snapshot Submitted</td>
+				        <td>-</td>
+				        <td></td>
+				        <td></td>
+				      </tr>
+				      <tr>
+				        <td>2</td>
+				        <td>20% off on</td>
+				        <td>Snapshot Submitted</td>
+				        <td>-</td>
+				        <td></td>
+				        <td></td>
+				      </tr>
+				      <tr>
+				        <td>3</td>
+				        <td>20% off on</td>
+				        <td>Snapshot Submitted</td>
+				        <td>-</td>
+				        <td></td>
+				        <td></td>
+				      </tr>
+				    </tbody>
+				 </table>
+
+			</div>
+			<div class="divider"></div>
+			<div>
+				<h3>Graphs</h3>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+ 
+
+
+</div>
+
+
+<script type="text/javascript" src="controller.js"></script>
+
+</body>
+</html>
